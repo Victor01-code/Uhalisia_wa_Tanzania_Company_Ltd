@@ -1,0 +1,422 @@
+/* Uhalisia wa Tanzania - Custom Brand Stylesheet */
+@import url('../vendor/fonts/fonts.css');
+@import url('../vendor/bootstrap-icons/bootstrap-icons.min.css');
+
+:root {
+    --uwt-primary: #C9642C;
+    --uwt-primary-hover: #B05322;
+    --uwt-primary-rgb: 201, 100, 44;
+    
+    --uwt-dark: #2B1B12;
+    --uwt-dark-rgb: 43, 27, 18;
+    
+    --uwt-gold: #D98B3F;
+    --uwt-gold-hover: #C57B30;
+    
+    --uwt-cream: #F3DCC5;
+    --uwt-cream-light: #FAF2EB;
+    --uwt-cream-bg: #FCF8F5;
+    
+    --uwt-olive: #5B6B3D;
+    --uwt-olive-hover: #4C5A32;
+    --uwt-olive-light: #EDF2E8;
+
+    --font-heading: 'Merriweather', Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--uwt-dark);
+    background-color: var(--uwt-cream-bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .brand-font {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--uwt-dark);
+    letter-spacing: -0.01em;
+}
+
+/* Primary Button */
+.btn-primary, .btn-uwt-primary {
+    background-color: var(--uwt-primary) !important;
+    border-color: var(--uwt-primary) !important;
+    color: #FFFFFF !important;
+    font-weight: 600;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover, .btn-uwt-primary:hover,
+.btn-primary:focus, .btn-uwt-primary:focus {
+    background-color: var(--uwt-primary-hover) !important;
+    border-color: var(--uwt-primary-hover) !important;
+    box-shadow: 0 4px 12px rgba(201, 100, 44, 0.25);
+    color: #FFFFFF !important;
+}
+
+/* Secondary Button */
+.btn-secondary, .btn-uwt-gold {
+    background-color: var(--uwt-gold) !important;
+    border-color: var(--uwt-gold) !important;
+    color: #FFFFFF !important;
+    font-weight: 600;
+}
+.btn-secondary:hover, .btn-uwt-gold:hover {
+    background-color: var(--uwt-gold-hover) !important;
+    border-color: var(--uwt-gold-hover) !important;
+}
+
+/* Olive Button */
+.btn-success, .btn-uwt-olive {
+    background-color: var(--uwt-olive) !important;
+    border-color: var(--uwt-olive) !important;
+    color: #FFFFFF !important;
+    font-weight: 600;
+}
+.btn-success:hover, .btn-uwt-olive:hover {
+    background-color: var(--uwt-olive-hover) !important;
+    border-color: var(--uwt-olive-hover) !important;
+}
+
+/* Outline Buttons */
+.btn-outline-primary {
+    color: var(--uwt-primary) !important;
+    border-color: var(--uwt-primary) !important;
+}
+.btn-outline-primary:hover {
+    background-color: var(--uwt-primary) !important;
+    color: #FFFFFF !important;
+}
+
+/* Cards & Layout */
+.card {
+    border: 1px solid rgba(43, 27, 18, 0.08);
+    border-radius: 0.875rem;
+    box-shadow: 0 4px 20px rgba(43, 27, 18, 0.04);
+    background-color: #FFFFFF;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 24px rgba(43, 27, 18, 0.08);
+}
+
+.card-header {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid rgba(43, 27, 18, 0.08);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    padding: 1rem 1.25rem;
+}
+
+/* Badges */
+.badge-status {
+    padding: 0.4rem 0.75rem;
+    border-radius: 50rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.status-new { background-color: #E0E7FF; color: #3730A3; }
+.status-contacted { background-color: #FEF3C7; color: #92400E; }
+.status-quoted, .status-quote_sent { background-color: #EDE9FE; color: #5B21B6; }
+.status-confirmed { background-color: #D1FAE5; color: #065F46; }
+.status-paid_in_full { background-color: #DCFCE7; color: #166534; font-weight: 700; }
+.status-in_progress { background-color: #CFFAFE; color: #155E75; }
+.status-completed { background-color: #D1E7DD; color: var(--uwt-olive); }
+.status-cancelled, .status-lost { background-color: #FEE2E2; color: #991B1B; }
+.status-won { background-color: #DCFCE7; color: #166534; }
+
+/* Navbar & Sidebar */
+.navbar-brand {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--uwt-dark) !important;
+}
+
+.admin-sidebar,
+aside.admin-sidebar,
+aside.admin-sidebar.offcanvas-lg {
+    background-color: var(--uwt-dark) !important;
+    color: var(--uwt-cream-light) !important;
+    min-height: 100vh;
+}
+
+.admin-sidebar .nav-link {
+    color: #FAF2EB !important;
+    padding: 0.72rem 1.15rem;
+    border-radius: 0.5rem;
+    margin: 0.18rem 0.75rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    transition: all 0.2s ease-in-out;
+    border-left: 3px solid transparent;
+}
+
+.admin-sidebar .nav-link i {
+    font-size: 1.15rem;
+    color: var(--uwt-gold);
+    transition: all 0.2s ease-in-out;
+    width: 20px;
+    text-align: center;
+}
+
+.admin-sidebar .nav-link:hover {
+    color: #FFFFFF !important;
+    background-color: rgba(201, 100, 44, 0.3) !important;
+    border-left: 3px solid var(--uwt-primary) !important;
+    transform: translateX(3px);
+}
+
+.admin-sidebar .nav-link:hover i {
+    color: #FFFFFF !important;
+    transform: scale(1.1);
+}
+
+.admin-sidebar .nav-link.active {
+    color: #FFFFFF !important;
+    background: linear-gradient(90deg, rgba(201, 100, 44, 0.45) 0%, rgba(201, 100, 44, 0.15) 100%) !important;
+    border-left: 4px solid var(--uwt-primary) !important;
+    font-weight: 600;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.admin-sidebar .nav-link.active i {
+    color: #FFFFFF !important;
+}
+
+.sidebar-heading {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--uwt-gold) !important;
+    padding: 1.15rem 1.5rem 0.45rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sidebar-heading::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background: rgba(217, 139, 63, 0.35);
+}
+
+/* Stat Cards */
+.stat-card {
+    border-left: 4px solid var(--uwt-primary);
+}
+.stat-card.stat-gold { border-left-color: var(--uwt-gold); }
+.stat-card.stat-olive { border-left-color: var(--uwt-olive); }
+.stat-card.stat-dark { border-left-color: var(--uwt-dark); }
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Tables */
+.table {
+    vertical-align: middle;
+}
+.table thead th {
+    background-color: var(--uwt-cream-light);
+    color: var(--uwt-dark);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-bottom: 2px solid rgba(43, 27, 18, 0.08);
+}
+
+/* Forms */
+.form-control, .form-select {
+    border: 1px solid rgba(43, 27, 18, 0.2);
+    border-radius: 0.5rem;
+    padding: 0.625rem 0.875rem;
+    font-size: 0.9375rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--uwt-primary);
+    box-shadow: 0 0 0 0.25rem rgba(201, 100, 44, 0.15);
+}
+
+/* Safari Badge & Accent elements */
+.bg-cream { background-color: var(--uwt-cream-light) !important; }
+.bg-safari-dark { background-color: var(--uwt-dark) !important; color: #FFFFFF; }
+.text-uwt-primary { color: var(--uwt-primary) !important; }
+.text-uwt-gold { color: var(--uwt-gold) !important; }
+.text-uwt-olive { color: var(--uwt-olive) !important; }
+.text-uwt-dark { color: var(--uwt-dark) !important; }
+
+/* Honeypot field (hidden from real users) */
+.form-hp {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+}
+
+/* ==========================================================================
+   Responsive Multi-Device Support (Smartphones, Tablets, Desktops)
+   ========================================================================== */
+
+#wrapper {
+    min-height: 100vh;
+    display: flex;
+    width: 100%;
+}
+
+/* Admin Sidebar Drawer (< 992px) */
+@media (max-width: 991.98px) {
+    .admin-sidebar,
+    aside.admin-sidebar,
+    aside.admin-sidebar.offcanvas-lg {
+        background-color: var(--uwt-dark) !important;
+        position: fixed !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        z-index: 1050 !important;
+        width: 280px !important;
+        max-width: 85vw !important;
+        height: 100vh !important;
+        max-height: 100vh !important;
+        overflow-y: auto !important;
+        box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.5) !important;
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        visibility: hidden;
+    }
+
+    .admin-sidebar.show,
+    aside.admin-sidebar.show,
+    aside.admin-sidebar.offcanvas-lg.show {
+        transform: translateX(0) !important;
+        visibility: visible !important;
+    }
+}
+
+/* Admin Sidebar Static on Desktop (>= 992px) */
+@media (min-width: 992px) {
+    .admin-sidebar,
+    aside.admin-sidebar,
+    aside.admin-sidebar.offcanvas-lg {
+        background-color: var(--uwt-dark) !important;
+        color: var(--uwt-cream-light) !important;
+        width: 265px !important;
+        min-width: 265px !important;
+        position: sticky !important;
+        top: 0 !important;
+        height: 100vh !important;
+        max-height: 100vh !important;
+        overflow-y: auto !important;
+        visibility: visible !important;
+        transform: none !important;
+        display: flex !important;
+        flex-shrink: 0 !important;
+        box-shadow: 2px 0 16px rgba(43, 27, 18, 0.15) !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+}
+
+/* Responsive Card Tabs (Horizontal touch scroll on small devices) */
+.card-header-tabs {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+.card-header-tabs::-webkit-scrollbar {
+    height: 4px;
+}
+
+.card-header-tabs::-webkit-scrollbar-thumb {
+    background: rgba(201, 100, 44, 0.3);
+    border-radius: 4px;
+}
+
+.card-header-tabs .nav-link {
+    white-space: nowrap !important;
+    padding: 0.5rem 0.85rem;
+    font-size: 0.875rem;
+}
+
+/* Touch-friendly scrolling for all data tables */
+.table-responsive {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+.table-responsive::-webkit-scrollbar {
+    height: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: rgba(201, 100, 44, 0.25);
+    border-radius: 4px;
+}
+
+/* Smartphone Adjustments (< 576px) */
+@media (max-width: 575.98px) {
+    h1, .h1 {
+        font-size: 1.45rem !important;
+    }
+
+    h2, .h2 {
+        font-size: 1.25rem !important;
+    }
+
+    .display-6 {
+        font-size: 1.65rem !important;
+    }
+
+    /* Comfortable touch targets on phones */
+    .btn {
+        min-height: 38px;
+    }
+
+    .form-control, .form-select {
+        min-height: 42px;
+        font-size: 16px; /* Prevents auto-zoom on iOS Safari */
+    }
+
+    .stat-card .display-6 {
+        font-size: 1.45rem !important;
+    }
+
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+}
+
+/* Tablet Optimizations (576px - 991px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .stat-card .display-6 {
+        font-size: 1.6rem;
+    }
+}
+

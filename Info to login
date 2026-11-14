@@ -1,0 +1,12 @@
+Here are all the staff accounts currently available in the users table:
+
+#	Name	Username / Email	Password	Role	Permissions / Access
+1	Portal Administrator	admin@uhalisiawatanzania.com	Admin@UWT2026!	admin	Full access (Staff Accounts, Settings, Financial Reports, Fleet, Bookings, Leads, Tour Templates)
+2	Safari Tour Agent	agent@uhalisiawatanzania.com	Agent@UWT2026!	agent	Core operations (Leads, Clients, Bookings, Itinerary Days, Vehicles, Drivers, Guides, Calendar)
+3	Chief Accountant	accountant@uhalisiawatanzania.com	Accounts@UWT2026!	accountant	Finance operations (Payments, Expenses, Exchange Rates, Financial Reports & CSV exports)
+Login Details
+Staff Login URL: http://localhost/uhalisia-portal/public/admin/login (or 
+
+/admin/login
+)
+Client Portal (Passwordless): /client (Clients request a 7-day magic link with their booking email)
